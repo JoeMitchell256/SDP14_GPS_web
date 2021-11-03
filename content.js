@@ -12,6 +12,18 @@ function clearCanvas(){
   ctx.beginPath();
 }
 
+/**
+Function drawBounds - clearly state the bounds for the longitude and latitude.
+  This will help the audience visualize the position of the gps signal.
+  Later the intent is to incorporate mapping and zooming capability (This will take several hours!)
+*/
+
+function drawBounds(){
+  ctx.fillStyle="red"
+  //ctx.font="italic bold 35pt Tahoma" Completely optional
+  ctx.fillText("Lat:90",50,50); //This should be just fine...
+  ctx.stroke();
+}
 
 /**
 Function - getInputValue retrieves the gps positions from a state file!
@@ -21,5 +33,5 @@ Function - getInputValue retrieves the gps positions from a state file!
 
 function getInputValue(){
   this.clearCanvas();
-  
+  this.drawBounds();
 }
